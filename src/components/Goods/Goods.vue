@@ -1,6 +1,13 @@
 <template>
     <div class="goods">
-        菜單內容
+        <!-- 左側菜單 -->
+        <div class="menu-wrapper">
+
+        </div>
+        <!-- 商品列表 -->
+        <div class="foods-wrapper">
+
+        </div>
     </div>
 </template> 
 
@@ -13,5 +20,5 @@
 
 
 <style>
-
+@import url(./Goods.css);
 </style>
