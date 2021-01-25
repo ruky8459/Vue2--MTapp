@@ -30,8 +30,8 @@
                         // console.log(dataSource.data);
                         that.container = dataSource.data.data.container_operation_source;
                         that.goods = dataSource.data.data.food_spu_tags;
-                        console.log(that.container);
-                        console.log(that.goods);
+                        // console.log(that.container);
+                        // console.log(that.goods);
                     }
                 })
                 .catch(function(error){
