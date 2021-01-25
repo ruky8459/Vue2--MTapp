@@ -2,15 +2,29 @@
     <div class="goods">
         <!-- 左側菜單 -->
         <div class="menu-wrapper">
-
+            <ul>
+                <!-- 專場 -->
+                <li class="menu-item">
+                    <p class="text">
+                        <img :src="container.tag_icon" v-if="container.tag_icon"  class="icon">
+                        {{container.tag_name}}
+                        
+                    </p>
+                </li>
+                <!-- 熱銷 -->
+                <li class="menu-item" v-for="item in goods" :key="item">
+                    <p class="text">
+                        <img :src="item.icon" v-if="item.icon"  class="icon">
+                        {{item.name}}
+                        
+                    </p>
+                </li>
+            </ul>
         </div>
         <!-- 商品列表 -->
-        <div class="foods-wrapper">
-
-        </div>
+        <div class="foods-wrapper"></div>
     </div>
 </template> 
-
 
 <script>
     export default{
