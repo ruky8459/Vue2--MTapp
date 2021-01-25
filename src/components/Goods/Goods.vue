@@ -12,7 +12,7 @@
                     </p>
                 </li>
                 <!-- 熱銷 -->
-                <li class="menu-item" v-for="item in goods" :key="item">
+                <li class="menu-item" v-for="item in goods" :key="item.id">
                     <p class="text">
                         <img :src="item.icon" v-if="item.icon"  class="icon">
                         {{item.name}}
@@ -22,7 +22,36 @@
             </ul>
         </div>
         <!-- 商品列表 -->
-        <div class="foods-wrapper"></div>
+        <div class="foods-wrapper">
+            <ul>
+                <!-- 具體分類 -->
+                <li v-for="item in goods" :key="item.id">
+                    
+                    <h3 class="title">{{item.name}}</h3>
+                    <ul>
+                        <!-- 具體商品列表 -->
+                        <li v-for="food in item.spus" :key="food.id">
+                            <div class="icon" :style="head_bg(food.picture)">
+
+                            </div>
+                            <div class="content">
+                                <div class="name">{{food.name}}</div>
+                                <div class="desc" v-if="food.description">{{food.description}}</div>
+                                <div class="extra">
+                                    <span class="saled">{{food.month_saled_content}}</span>
+                                    <span class="praise">{{food.praise_content}}</span>
+                                </div>
+                                <img class="product" :src="food.product_label_picture" >
+                                <p class="price">
+                                    <span class="text">¥{{food.min_price}}</span>
+                                    <span class="unit">/{{food.unit}}</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </template> 
 
@@ -51,7 +80,17 @@
                 .catch(function(error){
                     console.log(error);
                 })
+        },
+        methods:{
+            head_bg(imgName){
+                return "background-image: url(" + imgName + ");"
+            }
         }
+        // computed: { //計算屬性，不能傳遞參數
+        //     head_bg() {
+        //         return
+        //     }
+        // }
     }
 </script>
 
