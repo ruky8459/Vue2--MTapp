@@ -6,21 +6,13 @@
                 <!-- 專場 -->
                 <li class="menu-item">
                     <p class="text">
-<<<<<<< HEAD
-                        <img :src="container.tag_icon" v-if="container.tag_icon"  class="icon">
-=======
                     <img :src="container.tag_icon" v-if="container.tag_icon"  class="icon">
->>>>>>> foodList
                         {{container.tag_name}}
                         
                     </p>
                 </li>
                 <!-- 熱銷 -->
-<<<<<<< HEAD
-                <li class="menu-item" v-for="item in goods" :key="item">
-=======
                 <li class="menu-item" v-for="item in goods" :key="item.id">
->>>>>>> foodList
                     <p class="text">
                         <img :src="item.icon" v-if="item.icon"  class="icon">
                         {{item.name}}
@@ -30,9 +22,6 @@
             </ul>
         </div>
         <!-- 商品列表 -->
-<<<<<<< HEAD
-        <div class="foods-wrapper"></div>
-=======
         <div class="foods-wrapper">
             <ul>
                 <!-- 專場 -->
@@ -69,7 +58,6 @@
                 </li>
             </ul>
         </div>
->>>>>>> foodList
     </div>
 </template> 
 
@@ -98,9 +86,6 @@
                 .catch(function(error){
                     console.log(error);
                 })
-<<<<<<< HEAD
-        }
-=======
         },
         methods:{
             head_bg(imgName){
@@ -112,7 +97,6 @@
         //         return
         //     }
         // }
->>>>>>> foodList
     }
 </script>
 

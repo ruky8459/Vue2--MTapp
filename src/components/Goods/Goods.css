@@ -49,10 +49,6 @@ flex-basis: 定義了在分配多餘空間之前，項目佔據主軸空間。�
 }
 .goods .foods-wrapper{
     flex: 1;
-<<<<<<< HEAD
-    background: blue;
-}
-=======
     /* background: blue; */
 }
 .goods .foods-wrapper .container-list{
@@ -129,4 +125,3 @@ flex-basis: 定義了在分配多餘空間之前，項目佔據主軸空間。�
     font-size: 12px;
     color: #bfbfbf;
 }
->>>>>>> foodList
