@@ -84,6 +84,7 @@
         </div>
     </div>
 </template>
+
 <script>
     //import Star from '../Star/Star'<原先的相對路徑，如果覺得算返回幾層很麻煩，可以到webpack.base設置絕對路徑的縮寫
     import Star from 'components/Star/Star'
