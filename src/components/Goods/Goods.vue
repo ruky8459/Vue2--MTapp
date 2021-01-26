@@ -6,7 +6,7 @@
                 <!-- 專場 -->
                 <li class="menu-item">
                     <p class="text">
-                        <img :src="container.tag_icon" v-if="container.tag_icon"  class="icon">
+                    <img :src="container.tag_icon" v-if="container.tag_icon"  class="icon">
                         {{container.tag_name}}
                         
                     </p>
@@ -24,13 +24,19 @@
         <!-- 商品列表 -->
         <div class="foods-wrapper">
             <ul>
+                <!-- 專場 -->
+                <!-- <li class="container-list">
+                    <div v-for="item in container.operation_source_list" :key="item.id"  >
+                        <img :src="item.pic_url" >
+                    </div>
+                </li> -->
                 <!-- 具體分類 -->
-                <li v-for="item in goods" :key="item.id">
+                <li v-for="item in goods" :key="item.id" class="food-list">
                     
                     <h3 class="title">{{item.name}}</h3>
                     <ul>
                         <!-- 具體商品列表 -->
-                        <li v-for="food in item.spus" :key="food.id">
+                        <li v-for="food in item.spus" :key="food.id" class="food-item">
                             <div class="icon" :style="head_bg(food.picture)">
 
                             </div>
