@@ -131,7 +131,7 @@
     max-width:420px;
 } */
 .header{
-    height: 160px;
+    height: 130px;
     padding-top: 20px;
 }
 .header .top-wrapper{

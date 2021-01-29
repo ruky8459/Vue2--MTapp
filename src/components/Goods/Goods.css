@@ -2,7 +2,7 @@
     display: flex;
     /* 通過該方式確定高度 */
     position: absolute;
-    top: 220px;
+    top: 190px;
     bottom: 51px;
     /* 隱藏超出的部分 */
     overflow: hidden;

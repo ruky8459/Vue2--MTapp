@@ -58,17 +58,23 @@
                 </li>
             </ul>
         </div>
+        <Shopcart :shipping_fee_tip="poiInfo.shipping_fee_tip" :min_price_tip="poiInfo.min_price_tip"></Shopcart>
     </div>
 </template> 
 
 <script>
     import BScroll from 'better-scroll'
-
+    //導入購物車
+    import Shopcart from 'components/Shopcart/Shopcart'
     export default{
+        components:{
+            Shopcart,
+        },
         data(){
             return{
                 container:{},
                 goods:[],
+                poiInfo:{},
                 listHeight:[],
                 scrollY:0,
                 menuScroll:{},
@@ -83,6 +89,7 @@
                     if(dataSource.data.code == 0){
                         that.container = dataSource.data.data.container_operation_source;
                         that.goods = dataSource.data.data.food_spu_tags;
+                        that.poiInfo = dataSource.data.data.poi_info;
                         //觸發條件為dom的更新
                         that.$nextTick(()=>{
                             //DOM已經更新，可以執行BS初始化
@@ -164,10 +171,8 @@
                         return i;
 					}
 				}
-				
 				return 0;
             }
-
         }
     }
 </script>
