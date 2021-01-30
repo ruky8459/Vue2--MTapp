@@ -79,6 +79,7 @@ flex-basis: 定義了在分配多餘空間之前，項目佔據主軸空間。�
 .goods .foods-wrapper .food-list .food-item{
     display: flex;
     margin-bottom: 25px;
+    position: relative;
 }
 .goods .foods-wrapper .food-list .food-item .icon{
     flex: 0 0 63px;
@@ -129,4 +130,9 @@ flex-basis: 定義了在分配多餘空間之前，項目佔據主軸空間。�
 .goods .foods-wrapper .food-list .food-item .content .price .unit{
     font-size: 12px;
     color: #bfbfbf;
+}
+.goods .foods-wrapper .food-list .food-item .cartcontrol{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

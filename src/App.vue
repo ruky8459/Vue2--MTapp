@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+    <div id="app">
     <!-- <img src="./assets/logo.png">
     <HelloWorld/> -->
 
@@ -14,7 +14,7 @@
     
 
 
-  </div>
+    </div>
 </template>
 
 <script>
@@ -23,47 +23,47 @@
 import Myheader from 'components/Header/Header'
 import Mynav from 'components/Nav/Nav'
 export default {
-  name: 'App',
-  components: {//註冊
+    name: 'App',
+    components: {//註冊
     // HelloWorld
     Myheader,
     Mynav
-  },
-  data(){
+    },
+    data(){
     return{
       //header組件所需的信息(商家信息)`,先定義一個空值透過非同步請求從json取得。
-      poiInfo: {}
+        poiInfo: {}
     }
-  },
+    },
   created(){ //發起非同步請求，獲取數據
     //因為這裡的this指向的不是App.vue的實例，而是Vue對象所以處理一下
     var that = this;
     //通過axios發起get請求
     this.$axios.get('/api/goods')
-      .then(function (response) {//成功獲取數據
+        .then(function (response) {//成功獲取數據
           // console.log(response);
-        var dataSource = response.data;
-        if(dataSource.data.code == 0 ){
-          that.poiInfo = dataSource.data.data.poi_info;
-          // console.log(that.poiInfo);
-        }
+            var dataSource = response.data;
+            if(dataSource.data.code == 0 ){
+                that.poiInfo = dataSource.data.data.poi_info;
+            // console.log(that.poiInfo);
+            }
         
-      })
-      .catch(function (error) { //出錯處理
-        console.log(error);
-      });
+            })
+        .catch(function (error) { //出錯處理
+            console.log(error);
+        });
 
-  }
+    }
 }
 </script>
 
 <style>
 /* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
 } */
 </style>

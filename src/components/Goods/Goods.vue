@@ -53,6 +53,9 @@
                                     <span class="unit">/{{food.unit}}</span>
                                 </p>
                             </div>
+                            <div class="cartcontrol-wrapper">
+                                <Cartcontrol :food='food'></Cartcontrol>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -66,9 +69,11 @@
     import BScroll from 'better-scroll'
     //導入購物車
     import Shopcart from 'components/Shopcart/Shopcart'
+    import Cartcontrol from 'components/Cartcontrol/Cartcontrol'
     export default{
         components:{
             Shopcart,
+            Cartcontrol
         },
         data(){
             return{
@@ -127,7 +132,8 @@
                     click:true
                 });
                 this.foodScroll = new BScroll(this.$refs.foodScroll, {
-                    probeType:3
+                    probeType:3,
+                    click:true
                 });
                 //添加滾動監聽事件
                 this.foodScroll.on('scroll',(pos)=>{
