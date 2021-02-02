@@ -18,6 +18,9 @@
                         {{item.name}}
                         
                     </p>
+                    <!-- 小圖樣顯示選購數量 -->
+                    <i class="num" v-show="calculateCount(item.spus)">{{calculateCount(item.spus)}}</i>
+                    
                 </li>
             </ul>
         </div>
@@ -61,7 +64,8 @@
                 </li>
             </ul>
         </div>
-        <Shopcart :shipping_fee_tip="poiInfo.shipping_fee_tip" :min_price_tip="poiInfo.min_price_tip"></Shopcart>
+        <!-- :shipping_fee_tip="poiInfo.shipping_fee_tip" :min_price_tip="poiInfo.min_price_tip" -->
+        <Shopcart :poiInfo="poiInfo" :selectFoods="selectFoods"></Shopcart>
     </div>
 </template> 
 
@@ -161,6 +165,15 @@
                 let el = foodlist[index];
                 this.foodScroll.scrollToElement(el,250);
             
+            },
+            calculateCount(spus){
+                let count = 0;
+                spus.forEach((food)=>{
+                    if(food.count>0){
+                        count += food.count;
+                    }
+                });
+            return count;
             }
         },
         computed: {
@@ -178,6 +191,17 @@
 					}
 				}
 				return 0;
+            },
+            selectFoods(){
+                let foods = [];
+                this.goods.forEach((good)=>{
+                    good.spus.forEach((food)=>{
+                        if(food.count>0){
+                            foods.push(food);
+                        }
+                    });
+                });
+                return foods;
             }
         }
     }

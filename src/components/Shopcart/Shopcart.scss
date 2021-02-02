@@ -79,4 +79,111 @@ $color-gray-text:#bab9b9;
             font-weight: bold;
         }
     }
+    .shopcart-list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        
+        // 增加背景遮罩
+        height: 100vh;
+        background-color: rgba(7, 17, 27, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        &.show{
+            transform: translateY(-100%);
+        }
+        .list-top{
+            height: 30px;
+            font-size: 11px;
+            line-height: 30px;
+            text-align: center;
+            background: #f3e6c6;
+            color: #646158;
+        }
+        .list-header{
+            height: 30px;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            .title{
+                
+                border-left: 4px solid #53c123;
+                line-height: 30px;
+                font-size: 12px;
+            }
+            .empty{
+                line-height: 30px;
+                margin-right: 10px;
+                font-size: 0;
+                img{
+                    height: 14px;
+                    margin-right: 9px;
+                    vertical-align: middle;
+                }
+                span{
+                    font-size: 12px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .list-content{
+            max-height: 360px;
+            background: white;
+            overflow: hidden;
+            .food{
+                height: 38px;
+                padding: 12px 12px 10px 12px;
+                border-bottom: 1px solid #f4f4f4;
+                .desc-wrapper{
+                    display: flex;
+                    // justify-content: space-between;
+                    float: left;
+                    width: 240px;
+                    .desc-left{
+                        float: left;
+                        width: 170px;
+                        .name{
+                            margin-bottom: 8px;
+                            font-size: 16px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            height: 16px;
+                        }
+                        .unit{
+                            font-size: 12px;
+                            color: #b4b4b4;
+                        }
+                        .desc{
+                            font-size: 12px;
+                            color: #b4b4b4;
+                            overflow: hidden;
+                            height: 12px;
+                        }
+                    }
+                    .desc-right{
+                        float: right;
+                        width: 70px;
+                        text-align: right;
+                        .price{
+                            font-size: 12px;
+                            line-height: 38px;
+                        }
+                    }
+                }
+                .cartcontrol-wrapper{
+                    float: right;
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        
+    }
+    
 }
