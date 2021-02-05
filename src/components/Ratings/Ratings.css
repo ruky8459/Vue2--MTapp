@@ -1,0 +1,64 @@
+.ratings {
+  background: white;
+  width: 100vw;
+  height: calc(100vh - 190px);
+  overflow: hidden;
+}
+
+.ratings .overview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(100px, 30%) 1fr minmax(100px, 30%);
+      grid-template-columns: minmax(100px, 30%) 1fr minmax(100px, 30%);
+}
+
+.ratings .overview .overview-left {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.ratings .overview .overview-left .score {
+  font-size: 30px;
+  color: #ffb000;
+}
+
+.ratings .overview .overview-left p {
+  color: #666666;
+}
+
+.ratings .overview .overview-mid {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.ratings .overview .overview-mid .favor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.ratings .overview .overview-mid .pack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.ratings .overview .overview-right {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.ratings .overview .overview-right .score {
+  font-size: 28px;
+  color: #999999;
+}
+/*# sourceMappingURL=Ratings.css.map */

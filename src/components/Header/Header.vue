@@ -12,7 +12,7 @@
             </form>
             
             <div class="more-wrapper">
-                <a href="#" class="spelling-bt">拼多多</a>
+                <a href="#" class="spelling-bt">拼單</a>
                 <div class="more-bt">
                     <i class="s-radius"></i>
                     <i class="s-radius"></i>

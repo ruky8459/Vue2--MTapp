@@ -31,7 +31,7 @@
                                 v-show="!food.count || food.count == 0"
                                 @click="addFirst"
                             >
-                                選擇規格
+                                選規格
                             </div>
                         </div>
                     </div>

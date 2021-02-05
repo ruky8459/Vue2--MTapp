@@ -1,0 +1,43 @@
+.ratings{
+    background: white;
+    width: 100vw;
+    height: calc(100vh - 190px);
+    overflow: hidden;
+    .overview{
+        display: grid;
+        grid-template-columns: minmax(100px, 30%) 1fr minmax(100px, 30%);
+        .overview-left{
+            display: grid;
+            place-items: center;
+            .score{
+                font-size: 30px;
+                color: #ffb000;
+            }
+            p{
+                color: #666666;
+            }
+        }
+        .overview-mid{
+            display: grid;
+            place-items: center;
+            .favor{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+            .pack{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+        .overview-right{
+            display: grid;
+            place-items: center;
+            .score{
+                font-size: 28px;
+                color: #999999;
+            }
+        }
+    }
+}

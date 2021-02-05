@@ -4,7 +4,8 @@
   left: 0;
   bottom: 51px;
   background: white;
-  width: 100%;
+  width: 100vw;
+  height: calc(100vh - 51px);
   z-index: 90;
 }
 
