@@ -221,11 +221,11 @@
     margin-right: 1px;
 }
 /* 主要內容 */
-.content-wrapper{
+.header .content-wrapper{
     height: 50px;
     padding: 17px 10px 11px;
 }
-.content-wrapper .icon{
+.header .content-wrapper .icon{
     width: 50px;
     height: 50px;
     background-size: 135% 100%;
@@ -233,28 +233,28 @@
     border-radius: 5px;
     float: left;
 }
-.content-wrapper .name{
+.header .content-wrapper .name{
     float: left;
     padding: 18px 0 0 12px;
     
 }
-.content-wrapper .name h3{
+.header .content-wrapper .name h3{
     font-size: 16px;
     font-weight: bold;
     color: white;
 }
-.content-wrapper .collect{
+.header .content-wrapper .collect{
     width: 25px;
     height: 37px;
     float: right;
     text-align: center;
     padding-top: 6px;
 }
-.content-wrapper .collect img{
+.header .content-wrapper .collect img{
     width: 20px;
     height: 20px;
 }
-.content-wrapper .collect span{
+.header .content-wrapper .collect span{
     margin-top: 7px;
     color: white;
     font-size: 11px;

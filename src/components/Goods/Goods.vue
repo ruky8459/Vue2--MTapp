@@ -1,6 +1,6 @@
 <template>
     <div class="goods">
-        <!-- 左側菜單 -->
+        <!-- 左側菜單列表-->
         <div class="menu-wrapper" ref="menuScroll">
             <ul>
                 <!-- 專場 -->
@@ -39,7 +39,7 @@
                     <h3 class="title">{{item.name}}</h3>
                     <ul>
                         <!-- 具體商品列表 -->
-                        <li v-for="food in item.spus" :key="food.id" class="food-item">
+                        <li v-for="food in item.spus" :key="food.id" class="food-item" @click="showDetail(food)">
                             <div class="icon" :style="head_bg(food.picture)">
 
                             </div>
@@ -64,8 +64,10 @@
                 </li>
             </ul>
         </div>
-        <!-- :shipping_fee_tip="poiInfo.shipping_fee_tip" :min_price_tip="poiInfo.min_price_tip" -->
+        <!-- 購物車 -->
         <Shopcart :poiInfo="poiInfo" :selectFoods="selectFoods"></Shopcart>
+        <!-- 商品詳情頁 -->
+        <Food :food="selectedFood" ref="foodView"></Food>
     </div>
 </template> 
 
@@ -74,10 +76,12 @@
     //導入購物車
     import Shopcart from 'components/Shopcart/Shopcart'
     import Cartcontrol from 'components/Cartcontrol/Cartcontrol'
+    import Food from 'components/Food/Food'
     export default{
         components:{
             Shopcart,
-            Cartcontrol
+            Cartcontrol,
+            Food
         },
         data(){
             return{
@@ -87,7 +91,8 @@
                 listHeight:[],
                 scrollY:0,
                 menuScroll:{},
-                foodScroll:{}
+                foodScroll:{},
+                selectedFood:{}
             }
         },
         created() {
@@ -174,6 +179,13 @@
                     }
                 });
             return count;
+            },
+            showDetail(food){
+                // 傳遞給子組件的
+                this.selectedFood = food;
+                // 調用子組件方法顯示詳情頁
+                this.$refs.foodView.showView();
+
             }
         },
         computed: {
