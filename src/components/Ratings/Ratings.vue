@@ -9,11 +9,11 @@
             </div>
             <div class="overview-mid">
                 <div class="favor">
-                    <p>口味</p><Star :score="ratings.quality_score"></Star
+                    <span>口味</span><Star :score="ratings.quality_score"></Star
                     ><p>{{ ratings.quality_score }}</p>
                 </div>
                 <div class="pack">
-                    <p>包裝</p><Star :score="ratings.pack_score"></Star
+                    <span>包裝</span><Star :score="ratings.pack_score"></Star
                     ><p>{{ ratings.pack_score }}</p>
                 </div>
             </div>
@@ -24,12 +24,14 @@
                 <p>配送評分</p>
             </div>
         </div>
+        <Split></Split>
     </div>
 </template>
 
 
 <script>
 import Star from "components/Star/Star";
+import Split from "components/Split/Split";
 export default {
     data() {
         return {
@@ -52,6 +54,7 @@ export default {
     },
     components: {
         Star,
+        Split
     },
 };
 </script>

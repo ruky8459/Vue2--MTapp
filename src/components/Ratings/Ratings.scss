@@ -5,38 +5,61 @@
     overflow: hidden;
     .overview{
         display: grid;
-        grid-template-columns: minmax(100px, 30%) 1fr minmax(100px, 30%);
+        grid-template-columns: minmax(100px, 30%) 1fr minmax(100px, 20%);
+        padding: 20px 0 18px 0;
         .overview-left{
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             .score{
                 font-size: 30px;
+                font-weight: bold;
                 color: #ffb000;
             }
             p{
                 color: #666666;
+                font-size: 14px;
+                margin-top: .5rem;
             }
         }
         .overview-mid{
             display: grid;
             place-items: center;
+            
+            span{
+                font-size: 14px;
+                color: #666666;
+            }
+            p{
+                font-size: 14px;
+                color: #FFCA56;
+            }
             .favor{
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 width: 100%;
             }
             .pack{
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
                 width: 100%;
             }
         }
         .overview-right{
             display: grid;
             place-items: center;
+            border-left: 1px solid #F4F4F4;
             .score{
-                font-size: 28px;
+                font-size: 25px;
                 color: #999999;
+            }
+            p{
+                color: #BEBDBF;
+                font-size: 14px;
+                margin-top: .5rem;
             }
         }
     }

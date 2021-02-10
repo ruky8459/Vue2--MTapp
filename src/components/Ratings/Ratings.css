@@ -8,23 +8,37 @@
 .ratings .overview {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(100px, 30%) 1fr minmax(100px, 30%);
-      grid-template-columns: minmax(100px, 30%) 1fr minmax(100px, 30%);
+  -ms-grid-columns: minmax(100px, 30%) 1fr minmax(100px, 20%);
+      grid-template-columns: minmax(100px, 30%) 1fr minmax(100px, 20%);
+  padding: 20px 0 18px 0;
 }
 
 .ratings .overview .overview-left {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ratings .overview .overview-left .score {
   font-size: 30px;
+  font-weight: bold;
   color: #ffb000;
 }
 
 .ratings .overview .overview-left p {
   color: #666666;
+  font-size: 14px;
+  margin-top: .5rem;
 }
 
 .ratings .overview .overview-mid {
@@ -33,12 +47,25 @@
   place-items: center;
 }
 
+.ratings .overview .overview-mid span {
+  font-size: 14px;
+  color: #666666;
+}
+
+.ratings .overview .overview-mid p {
+  font-size: 14px;
+  color: #FFCA56;
+}
+
 .ratings .overview .overview-mid .favor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -48,6 +75,9 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -55,10 +85,17 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
+  border-left: 1px solid #F4F4F4;
 }
 
 .ratings .overview .overview-right .score {
-  font-size: 28px;
+  font-size: 25px;
   color: #999999;
+}
+
+.ratings .overview .overview-right p {
+  color: #BEBDBF;
+  font-size: 14px;
+  margin-top: .5rem;
 }
 /*# sourceMappingURL=Ratings.css.map */
