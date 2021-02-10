@@ -63,4 +63,57 @@
             }
         }
     }
+    .content{
+        padding: 16px;
+        // background: blue;
+        .rating-select{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 2px solid #FFCA56;
+            border-radius: 4px;
+            
+            .item{
+                display: inline-block;
+                width: 33.3%;
+                line-height: 33px;
+                background: white;
+                text-align: center;
+                border-right: 2px solid #FFCA56;
+                font-size: 16px;
+                color: #FFCA56;
+            }
+            .item:last-child{
+                border: none;
+                
+                img{
+                    height: 16px;
+                    vertical-align: middle;
+                }
+            }
+            .item.active{
+                color: black;
+                background: #FFCA56;
+            }
+            
+        }
+        .label-view{
+            // background: red;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 11px 0 11px 0 ;
+            span {
+                display: inline-block;
+                background: #f4f4f4;
+                border-radius: 3px;
+                font-size: 14px;
+                margin-top: .5em;
+                margin-right: .5em;
+                padding: .8em;
+            }
+            .item.mark{
+                color: #a9a9a9;
+            }
+        }
+    }
 }
