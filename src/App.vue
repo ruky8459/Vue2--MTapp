@@ -7,7 +7,9 @@
         <!-- Contents -->
         <!-- <div class="content"> content </div> -->
         <!-- 路由出口，路由匹配到的組件將會渲染在這 -->
-        <router-view></router-view>
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
     </div>
 </template>
 <script>

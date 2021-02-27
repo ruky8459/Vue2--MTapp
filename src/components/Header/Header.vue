@@ -43,7 +43,7 @@
             </div>
         </div>
         <!-- 公告詳情 -->
-        <transition name="detail">
+        <transition name="bulletin-detail-animate">
         <div class="bulletin-detail" v-show="isShow">
             <div class="detail-wrapper">
                 <div class="main-wrapper" :style="detail_bg">
@@ -411,13 +411,13 @@
 .xxx-leave-to
 .xxx-leave-active
 */
-.detail-enter-active,.detail-leave-active{
+.bulletin-detail-animate-enter-active,.bulletin-detail-animate-leave-active{
     transition: .8s all;
 }
-.detail-enter,.detail-leave-to{
+.bulletin-detail-animate-enter,.bulletin-detail-animate-leave-to{
     opacity: 0;
 }
-.detail-enter-to,.detail-leave{
+.bulletin-detail-animate-enter-to,.bulletin-detail-animate-leave{
     opacity: 1;
 }
 </style>

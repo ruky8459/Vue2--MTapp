@@ -12,10 +12,7 @@ const portfinder = require('portfinder')
 
 const express = require('express')
 const app = express()//請求server
-// var appData = require('../data.json')//載入本地資料檔案
-// var seller = appData.seller//獲取對應的本地資料
-// var goods = appData.goods
-// var ratings = appData.ratings
+
 var goods = require('../data/01-商品頁(點菜).json')//載入本地資料檔案
 var ratings = require('../data/02-商品頁(評價).json')//載入本地資料檔案
 var seller = require('../data/03-商品頁(商家).json')//載入本地資料檔案

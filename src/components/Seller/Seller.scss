@@ -1,10 +1,8 @@
 .seller{
+    width: 100vw;
     .seller-top{
         padding-left: 1rem;
         .addressAndPhone{
-            // display: grid;
-            // place-items: center;
-            // grid-template-columns: minmax(30px,10%) 1fr minmax(100px, 20%);
             display: flex;
             border-bottom: .1rem solid #f4f4f4;
             min-height: 4rem;
@@ -19,7 +17,6 @@
                 display: grid;
                 place-items: center;
                 width: 70%;
-                // padding-left: 1rem;
             }
             .phone{
                 width: 17%;
@@ -33,20 +30,22 @@
             }
         }
         .pic{
-            display: flex;
             overflow: hidden;
-            padding: .7rem 0;
-            border-bottom: .1rem solid #f4f4f4;
-            img{
-                width: 7rem;
-                height: 6rem;
-                object-fit: cover;
-                margin-right: .7rem;
+            .picContainer{
+                display: flex;
+                padding: .7rem 0;
+                border-bottom: .1rem solid #f4f4f4;
+                img{
+                    width: 7rem;
+                    height: 6rem;
+                    object-fit: cover;
+                    margin-right: .7rem;
+                }
             }
+            
         }
         .security{
             display: flex;
-            justify-content: flex-start;
             align-items: center;
             min-height: 3rem;
             .badge{
@@ -65,5 +64,71 @@
                 
             }
         }
+    }
+    .seller-mid{
+        padding-left: 1rem;
+        .deliver{
+            display: flex;
+            align-items: center;
+            min-height: 3rem;
+            border-bottom: .1rem solid #f4f4f4;
+            img{
+                width: 1rem;
+            }
+            p{
+                padding-left: 1rem;
+            }
+        }.time{
+            display: flex;
+            align-items: center;
+            min-height: 3rem;
+            img{
+                width: 1rem;
+            }
+            p{
+                padding-left: 1rem;
+            }
+        }
+    }
+    .seller-bot{
+        padding-left: 1rem;
+        .serve{
+            display: flex;
+            align-items: center;
+            min-height: 3rem;
+            border-bottom: .1rem solid #f4f4f4;
+            img{
+                width: 1rem;
+            }
+            p{
+                padding-left: 1rem;
+            }
+            .sub{
+                display: flex;
+                align-items: center;
+                img{
+                padding-left: 1rem;
+                }
+                p{
+                    padding-left: .3rem;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .discount{
+            display: flex;
+            align-items: center;
+            min-height: 3rem;
+            border-bottom: .1rem solid #f4f4f4;
+            img{
+                width: 1rem;
+            }
+            p{
+                padding-left: 1rem;
+            }
+        }
+    }
+    .fill_rest_space{
+        height: calc(100vh - 653px);
     }
 }
